@@ -1,0 +1,23 @@
+{
+  "retroactions": {
+    "positive": "Bonne réponse!",
+    "negative": "Mauvaise réponse!"
+  },
+  "explications": {
+    "Q1": "Blablabla explications sur Q1",
+    "Q2": "Blablabla explications sur Q2",
+    "Q3": "Blablabla explications sur Q3"
+  },
+  "bonnesReponses": [
+    "Q1A",
+    "Q2B",
+    "Q3C"
+  ],
+  "messages": {
+    "pasDeReponse": "Veuillez d'abord répondre à la question!",
+    "statusDebut": "Question(s) restante(s) : ",
+    "pointage": "Votre pointage : ",
+    "resultatsDebut": "Vous avez obtenu ",
+    "resultatsFin": " %!"
+  }
+}

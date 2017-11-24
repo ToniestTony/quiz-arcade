@@ -1,0 +1,22 @@
+{
+  "name": "quiz",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize-scss": "normalize.scss#^7.0.0",
+    "picturefill": "^3.0.2",
+    "susy": "^3.0.1",
+    "requirejs": "^2.3.5",
+    "animate.css": "^3.5.2"
+  }
+}
