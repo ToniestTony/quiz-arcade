@@ -71,8 +71,6 @@ $susy:(
     width: span(2 of 12);
     margin-left: span(1 of 12);
     margin-right: span(1 of 12);
-    padding: 10px;
-    background-color: lightgray;
   }
 
   .blocReponse{
@@ -85,6 +83,16 @@ $susy:(
       display: block;
       width: 100%;
       //padding: 10px;
+      background-color: blue;
+    }
+
+    label{
+      padding: 10px;
+      background-color: lightgray;
+    }
+
+    label:checked{
+      padding: 10px;
       background-color: blue;
     }
 

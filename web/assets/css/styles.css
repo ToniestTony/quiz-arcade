@@ -492,9 +492,7 @@ template {
     display: inline-block;
     width: 15.2542372881%;
     margin-left: 6.7796610169%;
-    margin-right: 6.7796610169%;
-    padding: 10px;
-    background-color: lightgray; }
+    margin-right: 6.7796610169%; }
   .choixReponses .blocReponse {
     display: inline-block;
     margin: 0;
@@ -503,6 +501,12 @@ template {
     .choixReponses .blocReponse img {
       display: block;
       width: 100%;
+      background-color: blue; }
+    .choixReponses .blocReponse label {
+      padding: 10px;
+      background-color: lightgray; }
+    .choixReponses .blocReponse label:checked {
+      padding: 10px;
       background-color: blue; }
 
 @media (max-width: 480px) {
