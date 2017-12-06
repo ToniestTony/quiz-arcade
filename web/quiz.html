@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <!--ICONS-->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/app-icones/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/app-icones/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/app-icones/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/app-icones/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/app-icones/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/app-icones/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/app-icones/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/app-icones/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/app-icones/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/app-icones/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/app-icones/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/app-icones/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/app-icones/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Quiz arcade</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+<!--Lien rapide à ajouter-->
+<main class="conteneur">
+<header role="banner">
+  <h1 class="title">Quiz sur les jeux vidéo d'arcade<br>
+    <span>Un quiz sur l'âge d'or des jeux vidéo!</span></h1>
+</header>
+
+  <form name="fQuizAWD" action="resultats.php">
+    <section id="Q1" class="section">
+        <div class="question">
+          <span class="numero__question">1/3</span>
+          <legend><h2>Quel est le fruit bonus disponible dans le premier niveau?</h2></legend>
+        </div>
+
+        <!--<div class="info">-->
+          <!--<h3>Nom du jeu</h3>-->
+          <!--<img src="http://via.placeholder.com/200x150">-->
+          <!--<p>Description</p>-->
+        <!--</div>-->
+
+        <div class="reponses">
+          <ul class="choixReponses">
+            <li>
+                <div class="blocReponse">
+                  <label for="Q1A">
+                      <img src="assets/images/cherry.png">
+                      Une cerise
+                  </label>
+                        <input id="Q1A" type="radio" name="Q1" value="1">
+                </div>
+            </li>
+            <li>
+                <div class="blocReponse">
+                  <label for="Q1B">
+                      <img src="assets/images/orange.png">
+                      Une orange
+                  </label>
+                    <input id="Q1B" type="radio" name="Q1" value="0">
+                </div>
+            </li>
+            <li>
+                <div class="blocReponse">
+                  <label for="Q1C">
+                      <img src="assets/images/strawberry.png">
+                      Une fraise
+                  </label>
+                    <input id="Q1C" type="radio" name="Q1" value="0">
+                </div>
+            </li>
+          </ul>
+            <div class="retroaction">
+                <h3></h3>
+                <p></p>
+                <span></span>
+            </div>
+        </div>
+            <div class="btnJS">
+
+            </div>
+        <div class="contenuInteractif">
+          <!--Ajouter ici avec JavaScript, la rétroaction, l'explication et la progression du quiz.-->
+        </div>
+    </section>
+
+
+
+    <section id="Q2" class="section">
+        <div class="question">
+          <span class="numero__question">2/3</span>
+          <legend><h2>Lequel de ses personnages était un boss dans le mode histoire de Street Fighter 2?</h2></legend>
+        </div>
+
+        <!--<div class="info">-->
+          <!--<h3>Nom du jeu</h3>-->
+          <!--<img src="http://via.placeholder.com/200x150">-->
+          <!--<p>Description</p>-->
+        <!--</div>-->
+
+        <div class="reponses">
+          <ul class="choixReponses">
+            <li>
+                <div class="blocReponse">
+              <input id="Q2A" type="radio" name="Q2" value="0">
+              <label for="Q2A">Zangief</label>
+                </div>
+            </li>
+            <li>
+                <div class="blocReponse">
+              <input id="Q2B" type="radio" name="Q2" value="0">
+              <label for="Q2B">E. Honda</label>
+                </div>
+            </li>
+            <li>
+                <div class="blocReponse">
+              <input id="Q2C" type="radio" name="Q2" value="1">
+              <label for="Q2C">Vega</label>
+                </div>
+            </li>
+          </ul>
+            <div class="retroaction">
+                <h3></h3>
+                <p></p>
+                <span></span>
+            </div>
+        </div>
+        <div class="btnJS">
+
+        </div>
+
+        <div class="contenuInteractif">
+          <!--Ajouter ici avec JavaScript, la rétroaction, l'explication et la progression du quiz.-->
+        </div>
+    </section>
+
+
+
+    <section id="Q3" class="section">
+        <div class="question">
+          <span class="numero__question">3/3</span>
+          <legend><h2>Quel est le dernier niveau dans lequel Mario fait tomber Donkey Kong?</h2></legend>
+        </div>
+
+        <!--<div class="info">-->
+          <!--<h3>Nom du jeu</h3>-->
+          <!--<img src="http://via.placeholder.com/200x150">-->
+          <!--<p>Description</p>-->
+        <!--</div>-->
+
+        <div class="reponses">
+          <ul class="choixReponses">
+            <li>
+                <div class="blocReponse">
+              <input id="Q3A" type="radio" name="Q3" value="0">
+              <label for="Q3A">Le niveau avec des tapis roulants.</label>
+                </div>
+            </li>
+            <li>
+                <div class="blocReponse">
+              <input id="Q3B" type="radio" name="Q3" value="1">
+              <label for="Q3B">Le niveau avec des rivets.</label>
+                </div>
+            </li>
+            <li>
+                <div class="blocReponse">
+              <input id="Q3C" type="radio" name="Q3" value="0">
+              <label for="Q3C">Le niveau avec des ascenseurs et des ressorts.</label>
+                </div>
+            </li>
+          </ul>
+            <div class="retroaction">
+                <h3></h3>
+                <p></p>
+                <span></span>
+            </div>
+        </div>
+        <div class="btnJS">
+
+        </div>
+
+        <div class="contenuInteractif">
+          <!--Ajouter ici avec JavaScript, la rétroaction, l'explication et la progression du quiz.-->
+        </div>
+    </section>
+
+
+
+    <button id='validerQuiz' name='validerQuiz' value="valider">Valider mes choix</button>
+  </form>
+</main>
+<footer role="contentinfo" class="conteneur">
+  <small>pied de page [crédits(votre nom); droits d'auteur sur le matériel utilisé, année]</small>
+</footer>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script> window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js">\x3C/script>')</script>
+<script src="bower_components/picturefill/dist/picturefill.min.js" async></script>
+
+<script src="bower_components/requirejs/require.js" data-main="assets/js/main.js"></script>
+
+</body>
+
+</html>

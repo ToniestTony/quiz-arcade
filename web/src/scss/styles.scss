@@ -1,0 +1,121 @@
+/**** LIB (Bibliothèques) ****/
+
+@import "../../bower_components/normalize-scss/sass/normalize/import-now";
+@import "../../bower_components/susy/sass/susy";
+@import "../../bower_components/susy/sass/plugins/svg-grid";
+
+/**** utilitaires ****/
+@import "utilitaires/_variables";
+@import "utilitaires/_mixins";
+/**** base (typo) ****/
+@import "base/typo";
+
+@include border-box-sizing;
+
+//fonts
+@font-face {
+  font-family: VT323;
+  src: url(../../assets/fonts/VT323-Regular.ttf);
+}
+
+@font-face {
+  font-family: RobotoMono-Regular;
+  src: url(../../assets/fonts/RobotoMono-Regular.ttf);
+}
+
+
+/* Règles générales */
+
+$susy:(
+        'columns': susy-repeat(12),
+        'gutters': 0.25,
+        'spread': 'narrow',
+);
+
+
+.conteneur{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background: svg-grid();
+  font-family: RobotoMono-Regular;
+  @include clearfix();
+}
+
+.choixReponses, .question{
+  font-family: VT323;
+}
+
+
+//question
+.question .numero__question{
+  font-size: 3em;
+}
+
+.reponses{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.choixReponses{
+  list-style: none;
+  font-size: 2em;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+
+
+  li{
+    display: inline-block;
+    width: span(2 of 12);
+    margin-left: span(1 of 12);
+    margin-right: span(1 of 12);
+    padding: 10px;
+    background-color: lightgray;
+  }
+
+  .blocReponse{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    img{
+      display: block;
+      width: 100%;
+      //padding: 10px;
+      background-color: blue;
+    }
+
+    //background-color: white;
+
+  }
+}
+
+@media(max-width: 480px) {
+
+  .choixReponses{
+    list-style: none;
+    font-size: 2em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    li{
+      display: inline-block;
+      width: 100%;
+    }
+
+    .blocReponse{
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      //background-color: white;
+
+    }
+  }
+
+}

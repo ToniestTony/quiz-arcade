@@ -1,0 +1,35 @@
+/**
+ * @author
+ * @todo Personnaliser les variables
+**/
+
+/** Polices de caractères **/
+$fonteTitres: Arial;
+
+/** Palette de couleurs **/
+// Utiliser http://chir.ag/projects/name-that-color pour obtenir
+// des noms uniques et mémorisables
+// Permettez-vous d'utiliser un nom de variable plus explicite si la suggestion de name-that-color est trop bizarre
+
+$noir: #000;
+
+//$dominante: ;
+$texte: $noir;
+//$hyperlien: ;
+
+
+
+
+/** Points de rupture **/
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+$mobilePortrait : 320px;
+/* smartphones, Android phones, landscape iPhone */
+$mobilePaysage : 480px;
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+$tablettePortrait : 600px;
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+$tablettePaysage : 801px;
+/* big landscape tablets, laptops, and desktops */
+$desktop : 1025px;
+/* hi-res laptops and desktops */
+$desktopLarge : 1281px;

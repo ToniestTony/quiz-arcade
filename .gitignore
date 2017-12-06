@@ -5,13 +5,13 @@ Icon?
 
 # dossier de réglages de PHPStorm
 .idea/
-
-bower_components/
-node_modules/
+web/node_modules/
+vendor/
+.env
 
 # dossier de cache de sass
 .sass-cache/
 
-# dossier compilé par sass
-assets/css/
-
+web/bower_components/animate.css/
+web/bower_components/normalize-scss/
+web/bower_components/susy/
