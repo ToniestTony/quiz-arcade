@@ -32,17 +32,24 @@
 
 <body>
 <!--Lien rapide à ajouter-->
+<div class="background">
 <main class="conteneur">
 <header role="banner">
-  <h1 class="title">Quiz sur les jeux vidéo d'arcade<br>
-    <span>Un quiz sur l'âge d'or des jeux vidéo!</span></h1>
+    <div class="banner">
+  <h1 class="title">Quiz Arcade<br>
+    <span class="subtitle">Un quiz sur l'âge d'or des jeux vidéo!</span></h1>
+    </div>
 </header>
 
   <form name="fQuizAWD" action="resultats.php">
     <section id="Q1" class="section">
         <div class="question">
-          <span class="numero__question">1/3</span>
-          <legend><h2>Quel est le fruit bonus disponible dans le premier niveau?</h2></legend>
+            <span class="question__numero">1/3</span>
+            <p class="question__label">Question:</p>
+            <div class="question__group">
+          <p class="question__question">Quel est le fruit bonus disponible dans le premier niveau?</p>
+            <img class="imgQuestion" src="assets/images/cherry.png">
+            </div>
         </div>
 
         <!--<div class="info">-->
@@ -52,39 +59,43 @@
         <!--</div>-->
 
         <div class="reponses">
+            <p class="reponses__label">Réponses:</p>
           <ul class="choixReponses">
             <li>
                 <div class="blocReponse">
+                    <input id="Q1A" type="radio" name="Q1" value="1">
                   <label for="Q1A">
                       <img src="assets/images/cherry.png">
                       Une cerise
                   </label>
-                        <input id="Q1A" type="radio" name="Q1" value="1">
+
                 </div>
             </li>
             <li>
                 <div class="blocReponse">
+                    <input id="Q1B" type="radio" name="Q1" value="0">
                   <label for="Q1B">
                       <img src="assets/images/orange.png">
                       Une orange
                   </label>
-                    <input id="Q1B" type="radio" name="Q1" value="0">
+
                 </div>
             </li>
             <li>
                 <div class="blocReponse">
+                    <input id="Q1C" type="radio" name="Q1" value="0">
                   <label for="Q1C">
                       <img src="assets/images/strawberry.png">
                       Une fraise
                   </label>
-                    <input id="Q1C" type="radio" name="Q1" value="0">
+
                 </div>
             </li>
           </ul>
             <div class="retroaction">
-                <h3></h3>
-                <p></p>
-                <span></span>
+                <h3 class="retroaction__titre"></h3>
+                <p class="retroaction__info"></p>
+                <span class="retroaction__progression"></span>
             </div>
         </div>
             <div class="btnJS">
@@ -99,8 +110,12 @@
 
     <section id="Q2" class="section">
         <div class="question">
-          <span class="numero__question">2/3</span>
-          <legend><h2>Lequel de ses personnages était un boss dans le mode histoire de Street Fighter 2?</h2></legend>
+            <span class="question__numero">2/3</span>
+            <p class="question__label">Question:</p>
+            <div class="question__group">
+                <p class="question__question">Lequel de ses personnages était un boss dans le mode histoire de Street Fighter 2?</p>
+                <img class="imgQuestion" src="assets/images/cherry.png">
+            </div>
         </div>
 
         <!--<div class="info">-->
@@ -110,30 +125,43 @@
         <!--</div>-->
 
         <div class="reponses">
+            <p class="reponses__label">Réponses:</p>
           <ul class="choixReponses">
             <li>
                 <div class="blocReponse">
-              <input id="Q2A" type="radio" name="Q2" value="0">
-              <label for="Q2A">Zangief</label>
+                    <input id="Q2A" type="radio" name="Q2" value="1">
+                    <label for="Q2A">
+                        <img src="assets/images/cherry.png">
+                        Zangief
+                    </label>
+
                 </div>
             </li>
             <li>
                 <div class="blocReponse">
-              <input id="Q2B" type="radio" name="Q2" value="0">
-              <label for="Q2B">E. Honda</label>
+                    <input id="Q2B" type="radio" name="Q2" value="1">
+                    <label for="Q2B">
+                        <img src="assets/images/cherry.png">
+                        E. Honda
+                    </label>
+
                 </div>
             </li>
             <li>
                 <div class="blocReponse">
-              <input id="Q2C" type="radio" name="Q2" value="1">
-              <label for="Q2C">Vega</label>
+                    <input id="Q2C" type="radio" name="Q2" value="1">
+                    <label for="Q2C">
+                        <img src="assets/images/cherry.png">
+                        Vega
+                    </label>
+
                 </div>
             </li>
           </ul>
             <div class="retroaction">
-                <h3></h3>
-                <p></p>
-                <span></span>
+                <h3 class="retroaction__titre"></h3>
+                <p class="retroaction__info"></p>
+                <span class="retroaction__progression"></span>
             </div>
         </div>
         <div class="btnJS">
@@ -149,8 +177,12 @@
 
     <section id="Q3" class="section">
         <div class="question">
-          <span class="numero__question">3/3</span>
-          <legend><h2>Quel est le dernier niveau dans lequel Mario fait tomber Donkey Kong?</h2></legend>
+            <span class="question__numero">3/3</span>
+            <p class="question__label">Question:</p>
+            <div class="question__group">
+                <p class="question__question">Quel est le dernier niveau dans lequel Mario fait tomber Donkey Kong?</p>
+                <img class="imgQuestion" src="assets/images/cherry.png">
+            </div>
         </div>
 
         <!--<div class="info">-->
@@ -160,30 +192,41 @@
         <!--</div>-->
 
         <div class="reponses">
+            <p class="reponses__label">Réponses:</p>
           <ul class="choixReponses">
             <li>
                 <div class="blocReponse">
-              <input id="Q3A" type="radio" name="Q3" value="0">
-              <label for="Q3A">Le niveau avec des tapis roulants.</label>
+                    <input id="Q3A" type="radio" name="Q3" value="1">
+                    <label for="Q3A">
+                        <img src="assets/images/cherry.png">
+                        Le niveau avec des tapis roulants.
+                    </label>
+
                 </div>
             </li>
             <li>
                 <div class="blocReponse">
-              <input id="Q3B" type="radio" name="Q3" value="1">
-              <label for="Q3B">Le niveau avec des rivets.</label>
+                    <input id="Q3B" type="radio" name="Q3" value="1">
+                    <label for="Q3B">
+                        <img src="assets/images/cherry.png">
+                        Le niveau avec des rivets.
+                    </label>
                 </div>
             </li>
             <li>
                 <div class="blocReponse">
-              <input id="Q3C" type="radio" name="Q3" value="0">
-              <label for="Q3C">Le niveau avec des ascenseurs et des ressorts.</label>
+                    <input id="Q3C" type="radio" name="Q3" value="1">
+                    <label for="Q3C">
+                        <img src="assets/images/cherry.png">
+                        Le niveau avec des ascenseurs et des ressorts.
+                    </label>
                 </div>
             </li>
           </ul>
             <div class="retroaction">
-                <h3></h3>
-                <p></p>
-                <span></span>
+                <h3 class="retroaction__titre"></h3>
+                <p class="retroaction__info"></p>
+                <span class="retroaction__progression"></span>
             </div>
         </div>
         <div class="btnJS">
@@ -197,12 +240,13 @@
 
 
 
-    <button id='validerQuiz' name='validerQuiz' value="valider">Valider mes choix</button>
+    <div class="btnValider"><button id='validerQuiz' name='validerQuiz' value="valider">Valider mes choix</button></div>
   </form>
 </main>
 <footer role="contentinfo" class="conteneur">
   <small>pied de page [crédits(votre nom); droits d'auteur sur le matériel utilisé, année]</small>
 </footer>
+</div>
 
 <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"

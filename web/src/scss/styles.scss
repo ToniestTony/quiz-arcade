@@ -37,7 +37,8 @@ $susy:(
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background: svg-grid();
+  //background: svg-grid();
+
   font-family: RobotoMono-Regular;
   @include clearfix();
 }
@@ -46,31 +47,126 @@ $susy:(
   font-family: VT323;
 }
 
+body{
+  background-color: black;
+}
+
+//image
+.background{
+  background-image: url("../images/grid.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+//titre
+.banner{
+  text-align: center;
+  color: deeppink;
+
+  .title{
+font-size: 3em;
+  }
+
+  .subtitle{
+    font-size: 0.5em;
+    color: #cd147f;
+  }
+}
+
 
 //question
-.question .numero__question{
-  font-size: 3em;
+.question{
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: left;
+  margin-left: span(1 of 12);
+  margin-right: span(1 of 12);
+  background-color: rgba(0,0,100,0.8);
+  margin-bottom: 30px;
+
+  .question__label, .question__numero, .question__question{
+    padding-left: 20px;
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  .question__label{
+    font-size: 3em;
+    padding-top: 50px;
+  }
+
+  .question__numero{
+    font-size: 6em;
+    text-decoration: underline;
+  }
+
+  .question__group{
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: span(12 of 12);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .question__question{
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: 2em;
+      width: span(9 of 12);
+      vertical-align: top;
+    }
+
+    .imgQuestion{
+      display: inline-block;
+      width: span(3 of 12);
+      border: 5px solid white;
+    }
+  }
+
 }
+
+
+
+
+
+//reponses
 
 .reponses{
   margin: 0;
   padding: 0;
   text-align: center;
+  margin-left: span(1 of 12);
+  margin-right: span(1 of 12);
+  background-color: rgba(0,0,100,0.8);
+  color: white;
+  font-family: VT323;
+
+}
+
+.reponses__label{
+  margin: 0;
+  font-size: 3em;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 .choixReponses{
   list-style: none;
   font-size: 2em;
   text-align: center;
+  margin: 0;
   padding: 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
 
 
   li{
     display: inline-block;
-    width: span(2 of 12);
-    margin-left: span(1 of 12);
-    margin-right: span(1 of 12);
+    width: 100%;
   }
 
   .blocReponse{
@@ -78,28 +174,109 @@ $susy:(
     margin: 0;
     padding: 0;
     width: 100%;
+    color: white;
 
     img{
       display: block;
       width: 100%;
+      border: 5px solid white;
       //padding: 10px;
-      background-color: blue;
     }
 
     label{
-      padding: 10px;
-      background-color: lightgray;
+      display: block;
+      padding: 20px;
+      //background-color: lightgray;
     }
 
-    label:checked{
+    label:hover{
+      background-color: rgba(255, 130, 255, 0.4);
+    }
+
+    input{
+      display: none;
+    }
+
+
+    input:checked + label{
       padding: 10px;
-      background-color: blue;
+      //background-color: blue;
+      border: 5px solid white;
+      background-color: rgba(255, 130, 255, 0.4);
     }
 
     //background-color: white;
 
   }
 }
+
+div.retroaction{
+  padding-left: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+
+
+  .retroaction__info, .retroaction__titre, .retroaction__progression{
+
+    font-size: 2em;
+    margin: 0;
+
+  }
+
+  .retroaction__titre{
+    font-size: 3em;
+  }
+
+  .bonneReponse{
+    color: lightgreen;
+  }
+
+  .mauvaiseReponse{
+    color: lightcoral;
+  }
+
+  .bonneReponse, .mauvaiseReponse{
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .bonneReponse + .retroaction__info , .mauvaiseReponse+ .retroaction__info{
+    padding-bottom: 20px;
+  }
+
+  .retroaction__info{
+    font-size: 1.5em;
+  }
+
+}
+
+.btnProgression{
+  margin-top: 20px;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-family: VT323;
+  font-size: 2em;
+}
+
+.btnProgression:hover{
+  background-color: #5479e6;
+}
+
+
+.btnJS, .btnValider{
+  margin-left: span(1 of 12);
+  margin-right: span(1 of 12);
+  text-align: center;
+
+  button{
+
+  }
+}
+
+
 
 @media(max-width: 480px) {
 
