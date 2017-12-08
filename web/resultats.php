@@ -86,9 +86,6 @@ $pourcentage=round(($pointage/3)*100);
     crossorigin="anonymous"></script>
 
 <script> window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js">\x3C/script>')</script>
-<script src="bower_components/picturefill/dist/picturefill.min.js" async></script>
-<script src="app.js"></script>
-
 </body>
 
 </html>

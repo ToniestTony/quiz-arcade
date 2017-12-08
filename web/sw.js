@@ -39,6 +39,7 @@ self.addEventListener('install', function(event) {
 
                 './assets/js/main.js',
                 './assets/js/Quiz.js',
+
                 './assets/js/jquery-3.2.1.min.js'
             ]);
         })
