@@ -16,6 +16,8 @@ define(["require", "exports"], function (require, exports) {
             // On commence par cacher le bouton de soumission du formulaire
             // Celui-ci ne servira QUE pour la version SANS JavaScript
             $('#validerQuiz').hide();
+            $(".btnJS").append("\n            <button\n            disabled \n            type=\"button\"\n            class=\"btnHide\">Veuillez choisir une r\u00E9ponse</button>");
+            btn.find(".btnProgression").on("click", this.cliquerBtnValiderMonChoix.bind(this));
             this.objJSONQuiz = objJSON;
             $("#Q" + this.questionActive + " .choixReponses input").unbind().on("click", this.afficherValider.bind(this));
             //afficher question
@@ -45,7 +47,6 @@ define(["require", "exports"], function (require, exports) {
      * @param {number} no -> le numéro de la question à afficher
      */
         Quiz.prototype.afficherValider = function () {
-            console.log(this.questionActive);
             var no = this.questionActive;
             var section = $("#Q" + no);
             var btn = section.find(".btnJS");
@@ -104,24 +105,6 @@ define(["require", "exports"], function (require, exports) {
          */
         Quiz.prototype.cliquerBtnProchaineQuestion = function (evenement) {
             this.questionActive++;
-            /*
-             ________________.___._____________________ ____________________________.________________________
-             \__    ___/\__  |   |\______   \_   _____//   _____/\_   ___ \______   \   \______   \__    ___/
-                 |    |    /   |   | |     ___/|    __)_ \_____  \ /    \  \/|       _/   ||     ___/ |    |
-                 |    |    \____   | |    |    |        \/        \\     \___|    |   \   ||    |     |    |
-                 |____|    / ______| |____|   /_______  /_______  / \______  /____|_  /___||____|     |____|
-                           \/                         \/        \/         \/       \/
-             TEST
-             2
-             2
-             2
-             3
-             4
-             5
-    
-    
-    
-             */
             //activer les prochains boutons radios
             //btn invisible
             $("#Q" + this.questionActive + " .btnJS .btnHide").show();
