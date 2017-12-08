@@ -62,14 +62,25 @@ body{
 .banner{
   text-align: center;
   color: deeppink;
+  margin-bottom: 20px;
 
   .title{
 font-size: 3em;
+    text-decoration: underline;
+    margin-bottom: 0;
   }
 
   .subtitle{
-    font-size: 0.5em;
+    margin: 0;
+    font-size: 1.5em;
     color: #cd147f;
+  }
+}
+
+.intro{
+  color: white;
+  a{
+    color: deeppink;
   }
 }
 
@@ -265,22 +276,72 @@ div.retroaction{
   background-color: #5479e6;
 }
 
-
 .btnJS, .btnValider{
   margin-left: span(1 of 12);
   margin-right: span(1 of 12);
+  margin-bottom: 20px;
   text-align: center;
+}
 
-  button{
+.btnHide{
+  margin-top: 20px;
+  width: 100%;
+  background-color: darkgray;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-family: VT323;
+  font-size: 2em;
+}
 
-  }
+footer{
+  color: white;
 }
 
 
 
 @media(max-width: 480px) {
 
+  //question
+  .question{
+    .question__label{
+      width: 100%;
+      font-size: 3em;
+      padding-top: 50px;
+      text-align: center;
+    }
+
+
+    .question__group{
+
+
+      .question__question{
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+        width: span(12 of 12);
+        vertical-align: top;
+      }
+
+      .imgQuestion{
+        width: 100%;
+        display: inline-block;
+        border: 5px solid white;
+      }
+    }
+
+  }
+
+
+  //reponses
+  .reponses__label{
+    text-align: center;
+  }
+
+
   .choixReponses{
+    display: inline-block;
     list-style: none;
     font-size: 2em;
     text-align: center;
@@ -289,7 +350,7 @@ div.retroaction{
 
     li{
       display: inline-block;
-      width: 100%;
+      width: span(8 of 12);
     }
 
     .blocReponse{
@@ -304,3 +365,5 @@ div.retroaction{
   }
 
 }
+
+//sass --watch web/src/scss:web/assets/css

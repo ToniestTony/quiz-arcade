@@ -55,6 +55,7 @@ define(["require", "exports"], function (require, exports) {
                 btn.append("\n            <button\n            type=\"button\"\n            data-cible=\"#" + ++no + "\"\n            name=\"btn_Submit\"\n            class=\"btnProgression\">Valider</button>");
                 btn.find(".btnProgression").on("click", this.cliquerBtnValiderMonChoix.bind(this));
             }
+            btn.find(".btnHide").hide();
         };
         /**
          *
@@ -81,7 +82,7 @@ define(["require", "exports"], function (require, exports) {
             retroaction.find("span").text(this.questionActive + "/" + this.nombreQuestions + " questions répondues");
             //enlever événement des boutons radios
             $("#Q" + this.questionActive + " .choixReponses input").unbind();
-            $("#Q" + this.questionActive + " .choixReponses input").attr("disabled", true);
+            $("#Q" + this.questionActive + " .choixReponses input").attr("disabled", "disabled");
             //changer le bouton valider pour prochaine question
             if (this.questionActive >= this.nombreQuestions) {
                 //derniere question
@@ -103,7 +104,27 @@ define(["require", "exports"], function (require, exports) {
          */
         Quiz.prototype.cliquerBtnProchaineQuestion = function (evenement) {
             this.questionActive++;
+            /*
+             ________________.___._____________________ ____________________________.________________________
+             \__    ___/\__  |   |\______   \_   _____//   _____/\_   ___ \______   \   \______   \__    ___/
+                 |    |    /   |   | |     ___/|    __)_ \_____  \ /    \  \/|       _/   ||     ___/ |    |
+                 |    |    \____   | |    |    |        \/        \\     \___|    |   \   ||    |     |    |
+                 |____|    / ______| |____|   /_______  /_______  / \______  /____|_  /___||____|     |____|
+                           \/                         \/        \/         \/       \/
+             TEST
+             2
+             2
+             2
+             3
+             4
+             5
+    
+    
+    
+             */
             //activer les prochains boutons radios
+            //btn invisible
+            $("#Q" + this.questionActive + " .btnJS .btnHide").show();
             $("#Q" + this.questionActive + " .choixReponses input").unbind().on("click", this.afficherValider.bind(this));
             this.afficherQuestion(this.questionActive);
         };

@@ -36,8 +36,8 @@
 <main class="conteneur">
 <header role="banner">
     <div class="banner">
-  <h1 class="title">Quiz Arcade<br>
-    <span class="subtitle">Un quiz sur l'âge d'or des jeux vidéo!</span></h1>
+  <h1 class="title">Quiz Arcade</h1><br>
+    <span class="subtitle">Un quiz sur l'âge d'or des jeux vidéo!</span>
     </div>
 </header>
 
@@ -99,6 +99,7 @@
             </div>
         </div>
             <div class="btnJS">
+                <button disabled class="btnHide">Veuillez choisir une réponse</button>
 
             </div>
         <div class="contenuInteractif">
@@ -129,7 +130,7 @@
           <ul class="choixReponses">
             <li>
                 <div class="blocReponse">
-                    <input id="Q2A" type="radio" name="Q2" value="1">
+                    <input id="Q2A" type="radio" name="Q2" value="0">
                     <label for="Q2A">
                         <img src="assets/images/cherry.png">
                         Zangief
@@ -139,7 +140,7 @@
             </li>
             <li>
                 <div class="blocReponse">
-                    <input id="Q2B" type="radio" name="Q2" value="1">
+                    <input id="Q2B" type="radio" name="Q2" value="0">
                     <label for="Q2B">
                         <img src="assets/images/cherry.png">
                         E. Honda
@@ -165,6 +166,7 @@
             </div>
         </div>
         <div class="btnJS">
+            <button disabled class="btnHide">Veuillez choisir une réponse</button>
 
         </div>
 
@@ -196,7 +198,7 @@
           <ul class="choixReponses">
             <li>
                 <div class="blocReponse">
-                    <input id="Q3A" type="radio" name="Q3" value="1">
+                    <input id="Q3A" type="radio" name="Q3" value="0">
                     <label for="Q3A">
                         <img src="assets/images/cherry.png">
                         Le niveau avec des tapis roulants.
@@ -215,7 +217,7 @@
             </li>
             <li>
                 <div class="blocReponse">
-                    <input id="Q3C" type="radio" name="Q3" value="1">
+                    <input id="Q3C" type="radio" name="Q3" value="0">
                     <label for="Q3C">
                         <img src="assets/images/cherry.png">
                         Le niveau avec des ascenseurs et des ressorts.
@@ -230,6 +232,7 @@
             </div>
         </div>
         <div class="btnJS">
+            <button disabled class="btnHide">Veuillez choisir une réponse</button>
 
         </div>
 
@@ -240,7 +243,7 @@
 
 
 
-    <div class="btnValider"><button id='validerQuiz' name='validerQuiz' value="valider">Valider mes choix</button></div>
+    <div class="btnValider"><button id='validerQuiz' class="btnProgression" name='validerQuiz' value="valider">Valider mes choix</button></div>
   </form>
 </main>
 <footer role="contentinfo" class="conteneur">
@@ -257,6 +260,8 @@
 <script src="bower_components/picturefill/dist/picturefill.min.js" async></script>
 
 <script src="bower_components/requirejs/require.js" data-main="assets/js/main.js"></script>
+
+<script src="app.js"></script>
 
 </body>
 

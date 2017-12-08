@@ -59,22 +59,26 @@ $pourcentage=round(($pointage/3)*100);
 
 <body>
 <!--Lien rapide à ajouter-->
-<header role="banner">
-    <h1 class="title">Quiz sur les jeux vidéo d'arcade<br>
-        <span>Un quiz sur l'âge d'or des jeux vidéo!</span></h1>
-</header>
-<main>
-    <h2>Conclusion</h2>
+<div class="">
+    <main class="conteneur intro">
+        <header role="banner">
+            <div class="banner">
+                <h1 class="title">Quiz Arcade</h1><br>
+                <span class="subtitle">Un quiz sur l'âge d'or des jeux vidéo!</span>
+            </div>
+        </header>
+
     <?php if($pointage==0){ ?>
-        <p>Malheureusement vous n'avez eu aucun point, meilleur chance la prochaine fois!</p>
+        <h2>Malheureusement, </h2><p>vous n'avez eu aucun point, meilleure chance la prochaine fois!</p>
     <?php }else{ ?>
-        <p>Bravo vous avez eu <?php echo $pointage; ?> sur 3 questions (<?php echo $pourcentage; ?>) !</p>
+        <h2>Bravo, </h2><p>vous avez eu <?php echo $pointage; ?> sur 3 questions (<?php echo $pourcentage; ?>) !</p>
     <?php } ?>
     <p><a href="quiz.html">Commencer le quiz</a></p>
 </main>
 <footer role="contentinfo">
     <small>pied de page Antoine Beaulieu Savard droits d'auteur sur le matériel utilisé, année]</small>
 </footer>
+</div>
 
 <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"

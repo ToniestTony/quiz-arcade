@@ -13,5 +13,5 @@ define(["require", "exports", "./Quiz"], function (require, exports, Quiz_1) {
 /*window.onhashchange = function() {
     window.location.hash ? null : window.location.hash ="#1";
     objQuiz.afficherEtapeCourante(window.location.hash);
-};*/
+};*/ 
 //# sourceMappingURL=main.js.map
