@@ -1,5 +1,5 @@
 {
- "name": "Quiz",
+ "name": "Quiz Arcade",
  "short_name": "Quiz",
  "description": "Un quiz sur les jeux vidéos d'arcade!",
  "start_url": "index.html?launcher=true",

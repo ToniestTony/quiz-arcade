@@ -17,7 +17,6 @@ define(["require", "exports"], function (require, exports) {
             // Celui-ci ne servira QUE pour la version SANS JavaScript
             $('#validerQuiz').hide();
             $(".btnJS").append("\n            <button\n            disabled \n            type=\"button\"\n            class=\"btnHide\">Veuillez choisir une r\u00E9ponse</button>");
-            btn.find(".btnProgression").on("click", this.cliquerBtnValiderMonChoix.bind(this));
             this.objJSONQuiz = objJSON;
             $("#Q" + this.questionActive + " .choixReponses input").unbind().on("click", this.afficherValider.bind(this));
             //afficher question

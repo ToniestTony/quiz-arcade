@@ -24,7 +24,6 @@ export class Quiz {
             disabled 
             type="button"
             class="btnHide">Veuillez choisir une réponse</button>`);
-        btn.find(".btnProgression").on("click",this.cliquerBtnValiderMonChoix.bind(this));
 
         this.objJSONQuiz=objJSON;
 

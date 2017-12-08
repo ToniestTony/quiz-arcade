@@ -10,6 +10,8 @@ self.addEventListener('install', function(event) {
             return cache.addAll([
                 './',
                 './quiz.html',
+                './index.html',
+                './resultats.php',
                 './app.js',
                 './sw.js',
                 './assets/css/styles.css',
