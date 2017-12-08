@@ -109,6 +109,7 @@ define(["require", "exports"], function (require, exports) {
             $("#Q" + this.questionActive + " .btnJS .btnHide").show();
             $("#Q" + this.questionActive + " .choixReponses input").unbind().on("click", this.afficherValider.bind(this));
             this.afficherQuestion(this.questionActive);
+            //changer derniere question pour SECTION js
         };
         return Quiz;
     }());

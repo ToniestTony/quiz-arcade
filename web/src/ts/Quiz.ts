@@ -141,5 +141,7 @@ export class Quiz {
         $("#Q"+this.questionActive+" .choixReponses input").unbind().on("click",this.afficherValider.bind(this));
 
         this.afficherQuestion(this.questionActive);
+
+        //changer derniere question pour SECTION js
     }
 }
