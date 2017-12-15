@@ -13,5 +13,6 @@ vendor/
 .sass-cache/
 
 web/bower_components/animate.css/
+web/bower_components/animate.min.css/
 web/bower_components/normalize-scss/
 web/bower_components/susy/
