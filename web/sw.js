@@ -25,10 +25,19 @@ self.addEventListener('install', function(event) {
                 './assets/fonts/RobotoMono-Regular.ttf',
                 './assets/fonts/VT323-Regular.ttf',
 
-                './assets/images/cherry.png',
+                './assets/images/cerise400.png',
+                './assets/images/donkeykong400.png',
+                './assets/images/ehonda400.png',
+                './assets/images/fraise400.png',
                 './assets/images/grid.jpg',
-                './assets/images/orange.png',
-                './assets/images/strawberry.png',
+                './assets/images/level1400.png',
+                './assets/images/level2400.png',
+                './assets/images/level3400.png',
+                './assets/images/orange400.png',
+                './assets/images/pacman400.png',
+                './assets/images/streetfighter400.png',
+                './assets/images/vega400.png',
+                './assets/images/zangief400.png',
 
                 './logging.js',
                 './bower_components/jquery/dist/jquery.min.js',
@@ -38,7 +47,7 @@ self.addEventListener('install', function(event) {
                 //bower components: jquery.min.js / require / picture fill / polyfill
 
                 './assets/js/main.js',
-                './assets/js/Quiz.js',
+                './assets/js/Quiz.js'
             ]);
         })
     );
