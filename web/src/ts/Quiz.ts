@@ -104,6 +104,8 @@ export class Quiz {
             let retroaction=section.find(".retroaction");
             retroaction.find("h3").addClass("mauvaiseReponse").text(this.objJSONQuiz['retroactions']['negative']);
         }
+        $("#Q"+this.questionActive+" li input[value='1']").addClass("bonneValidation");
+
         retroaction.find("p").text(this.objJSONQuiz["explications"]["Q"+this.questionActive]);
         retroaction.find("span").text(this.questionActive+"/"+this.nombreQuestions+" questions répondues");
 
@@ -117,8 +119,8 @@ export class Quiz {
             bouton.unbind();
             bouton.hide();
             $("#validerQuiz").show();
-            $(".choixReponses input").show();
-            $(".choixReponses input").removeAttr("disabled");
+            /*$(".choixReponses input").show();
+            $(".choixReponses input").removeAttr("disabled");*/
 
         }else{
             bouton.text("Prochaine question");

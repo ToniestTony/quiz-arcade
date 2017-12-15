@@ -78,6 +78,7 @@ define(["require", "exports"], function (require, exports) {
                 var retroaction_1 = section.find(".retroaction");
                 retroaction_1.find("h3").addClass("mauvaiseReponse").text(this.objJSONQuiz['retroactions']['negative']);
             }
+            $("#Q" + this.questionActive + " li input[value='1']").addClass("bonneValidation");
             retroaction.find("p").text(this.objJSONQuiz["explications"]["Q" + this.questionActive]);
             retroaction.find("span").text(this.questionActive + "/" + this.nombreQuestions + " questions répondues");
             //enlever événement des boutons radios
@@ -89,8 +90,8 @@ define(["require", "exports"], function (require, exports) {
                 bouton.unbind();
                 bouton.hide();
                 $("#validerQuiz").show();
-                $(".choixReponses input").show();
-                $(".choixReponses input").removeAttr("disabled");
+                /*$(".choixReponses input").show();
+                $(".choixReponses input").removeAttr("disabled");*/
             }
             else {
                 bouton.text("Prochaine question");

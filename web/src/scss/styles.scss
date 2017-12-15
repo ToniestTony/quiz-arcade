@@ -194,6 +194,15 @@ font-size: 3em;
       //padding: 10px;
     }
 
+    .bonneValidation + label{
+      color: lightgreen;
+      background-color: lightgreen;
+      img{
+        border: 5px solid lightgreen;
+      }
+
+    }
+
     label{
       display: block;
       padding: 20px;
@@ -213,6 +222,20 @@ font-size: 3em;
       padding: 10px;
       //background-color: blue;
       border: 5px solid white;
+      background-color: rgba(255, 130, 255, 0.4);
+    }
+
+    input:checked.bonneValidation + label{
+      padding: 10px;
+      //background-color: blue;
+      border: 5px solid lightgreen;
+      background-color: rgba(255, 130, 255, 0.4);
+    }
+
+    .bonneValidation + label{
+      padding: 10px;
+      //background-color: blue;
+      border: 5px solid lightgreen;
       background-color: rgba(255, 130, 255, 0.4);
     }
 

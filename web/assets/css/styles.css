@@ -576,6 +576,11 @@ body {
       display: block;
       width: 100%;
       border: 5px solid white; }
+    .choixReponses .blocReponse .bonneValidation + label {
+      color: lightgreen;
+      background-color: lightgreen; }
+      .choixReponses .blocReponse .bonneValidation + label img {
+        border: 5px solid lightgreen; }
     .choixReponses .blocReponse label {
       display: block;
       padding: 20px; }
@@ -586,6 +591,14 @@ body {
     .choixReponses .blocReponse input:checked + label {
       padding: 10px;
       border: 5px solid white;
+      background-color: rgba(255, 130, 255, 0.4); }
+    .choixReponses .blocReponse input:checked.bonneValidation + label {
+      padding: 10px;
+      border: 5px solid lightgreen;
+      background-color: rgba(255, 130, 255, 0.4); }
+    .choixReponses .blocReponse .bonneValidation + label {
+      padding: 10px;
+      border: 5px solid lightgreen;
       background-color: rgba(255, 130, 255, 0.4); }
 
 div.retroaction {
