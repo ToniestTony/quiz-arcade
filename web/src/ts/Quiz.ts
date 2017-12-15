@@ -19,11 +19,16 @@ export class Quiz {
         // Celui-ci ne servira QUE pour la version SANS JavaScript
         $('#validerQuiz').hide();
 
+        $(".blocReponse").css("opacity",0);
+
         $(".btnJS").append(`
             <button
             disabled 
             type="button"
             class="btnHide">Veuillez choisir une réponse</button>`);
+
+
+
 
         this.objJSONQuiz=objJSON;
 
@@ -31,6 +36,10 @@ export class Quiz {
 
         //afficher question
         this.afficherQuestion(this.questionActive);
+
+
+
+
     }
 
 
@@ -52,6 +61,29 @@ export class Quiz {
             // name="btn_Submit"
             // class="btnProgression">Continuer</button>`);
             // btn.find(".btnProgression").on("click",this.avancerProchainEtape)
+            //animation css
+
+            $('#Q'+this.questionActive+' .question').addClass("animated fadeInLeft");
+
+            setTimeout(function () {
+                $('#Q'+this.questionActive+' .reponses').addClass("animated fadeInLeft");
+            }.bind(this),100)
+
+
+
+            $('#Q'+this.questionActive+' .reponses').one('onanimationend animationend',function(){
+                var animName="animated fadeInUp";
+                console.log('done');
+
+                $('#Q'+this.questionActive+' .blocReponse').eq(0).addClass(animName);
+                setTimeout(function () {
+                    $('#Q'+this.questionActive+' .blocReponse').eq(1).addClass(animName);
+                }.bind(this),100)
+
+                setTimeout(function () {
+                    $('#Q'+this.questionActive+' .blocReponse').eq(2).addClass(animName);
+                }.bind(this),200)
+            }.bind(this));
         }
     }
 
@@ -103,11 +135,21 @@ export class Quiz {
             //mauvaise reponse
             let retroaction=section.find(".retroaction");
             retroaction.find("h3").addClass("mauvaiseReponse").text(this.objJSONQuiz['retroactions']['negative']);
+
+            //mauvaise reponse deviens rouge
+            section.find("li input:checked").addClass("mauvaiseValidation");
+            section.find("li input:checked + label").addClass("mauvaiseValidation");
+
         }
-        $("#Q"+this.questionActive+" li input[value='1']").addClass("bonneValidation");
+        //bonne reponse deviens verte et animation
+        $("#Q"+this.questionActive+" li input[value='1']").addClass("bonneValidation animated flash");
+        $("#Q"+this.questionActive+" li input[value='1'] + label").addClass("bonneValidation animated flash");
+
 
         retroaction.find("p").text(this.objJSONQuiz["explications"]["Q"+this.questionActive]);
         retroaction.find("span").text(this.questionActive+"/"+this.nombreQuestions+" questions répondues");
+
+        retroaction.addClass("animated fadeIn");
 
         //enlever événement des boutons radios
         $("#Q"+this.questionActive+" .choixReponses input").unbind();
@@ -115,11 +157,31 @@ export class Quiz {
 
         //changer le bouton valider pour prochaine question
         if(this.questionActive>=this.nombreQuestions){
+            $(".question").hide();
+            $(".reponses").hide();
             //derniere question
             bouton.unbind();
             bouton.hide();
+
+            let pourcent=Math.round((this.pointage/this.nombreQuestions)*100);
+
+            //afficher résultats
+            $(".resultat").show().addClass("animated fadeIn");
+            $(".resultat .question").show();
+            $("#questionBonne").html(this.pointage.toString());
+            $("#questionPourcent").html(pourcent.toString());
+
+
+
+
+
+            /*
+            bouton.unbind();
+            bouton.hide();
             $("#validerQuiz").show();
-            /*$(".choixReponses input").show();
+            $(".choixReponses input").show();
+            //$(".choixReponses input").css('left',-999);
+
             $(".choixReponses input").removeAttr("disabled");*/
 
         }else{
@@ -141,6 +203,9 @@ export class Quiz {
         //btn invisible
         $("#Q"+this.questionActive+" .btnJS .btnHide").show();
         $("#Q"+this.questionActive+" .choixReponses input").unbind().on("click",this.afficherValider.bind(this));
+
+
+
 
         this.afficherQuestion(this.questionActive);
 

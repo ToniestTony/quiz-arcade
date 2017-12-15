@@ -73,7 +73,7 @@ $pourcentage=round(($pointage/3)*100);
     <?php }else{ ?>
         <h2>Bravo, </h2><p>vous avez eu <?php echo $pointage; ?> sur 3 questions (<?php echo $pourcentage; ?>) !</p>
     <?php } ?>
-    <p><a href="quiz.html">Commencer le quiz</a></p>
+    <p><a href="index.html">Recommencer le quiz</a></p>
 </main>
 <footer role="contentinfo">
     <small>pied de page Antoine Beaulieu Savard droits d'auteur sur le matériel utilisé, année]</small>

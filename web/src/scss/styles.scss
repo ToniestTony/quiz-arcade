@@ -203,6 +203,15 @@ font-size: 3em;
 
     }
 
+    .mauvaiseValidation + label{
+      color: lightcoral;
+      background-color: lightcoral;
+      img{
+        border: 5px solid lightcoral;
+      }
+
+    }
+
     label{
       display: block;
       padding: 20px;
@@ -215,6 +224,7 @@ font-size: 3em;
 
     input{
       display: none;
+      visibility: hidden;
     }
 
 
@@ -236,6 +246,20 @@ font-size: 3em;
       padding: 10px;
       //background-color: blue;
       border: 5px solid lightgreen;
+      background-color: rgba(255, 130, 255, 0.4);
+    }
+
+    input:checked.mauvaiseValidation + label{
+      padding: 10px;
+      //background-color: blue;
+      border: 5px solid lightcoral;
+      background-color: rgba(255, 130, 255, 0.4);
+    }
+
+    .mauvaiseValidation + label{
+      padding: 10px;
+      //background-color: blue;
+      border: 5px solid lightcoral;
       background-color: rgba(255, 130, 255, 0.4);
     }
 
@@ -315,6 +339,24 @@ div.retroaction{
   padding: 10px;
   font-family: VT323;
   font-size: 2em;
+
+}
+
+.resultat{
+  display: none;
+  .resultat__info{
+    font-size: 1.5em;
+  }
+
+  .btnProgression{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .question{
+    padding-bottom: 20px;
+  }
 
 }
 

@@ -27,6 +27,7 @@
   <title>Quiz arcade</title>
 
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="bower_components/animate.css/animate.css">
 
 </head>
 
@@ -47,8 +48,8 @@
             <span class="question__numero">1/3</span>
             <p class="question__label">Question:</p>
             <div class="question__group">
-          <p class="question__question">Quel est le fruit bonus disponible dans le premier niveau?</p>
-            <img class="imgQuestion" src="assets/images/cherry.png">
+          <p class="question__question">Quel est le fruit bonus disponible dans le premier niveau de Pacman?</p>
+            <img class="imgQuestion" src="assets/images/pacman400.png">
             </div>
         </div>
 
@@ -65,7 +66,7 @@
                 <div class="blocReponse">
                     <input id="Q1A" type="radio" name="Q1" value="1">
                   <label for="Q1A">
-                      <img src="assets/images/cherry.png">
+                      <img src="assets/images/cerise400.png">
                       Une cerise
                   </label>
 
@@ -75,7 +76,7 @@
                 <div class="blocReponse">
                     <input id="Q1B" type="radio" name="Q1" value="0">
                   <label for="Q1B">
-                      <img src="assets/images/orange.png">
+                      <img src="assets/images/orange400.png">
                       Une orange
                   </label>
 
@@ -85,7 +86,7 @@
                 <div class="blocReponse">
                     <input id="Q1C" type="radio" name="Q1" value="0">
                   <label for="Q1C">
-                      <img src="assets/images/strawberry.png">
+                      <img src="assets/images/fraise400.png">
                       Une fraise
                   </label>
 
@@ -115,7 +116,7 @@
             <p class="question__label">Question:</p>
             <div class="question__group">
                 <p class="question__question">Lequel de ses personnages était un boss dans le mode histoire de Street Fighter 2?</p>
-                <img class="imgQuestion" src="assets/images/cherry.png">
+                <img class="imgQuestion" src="assets/images/streetfighter400.png">
             </div>
         </div>
 
@@ -132,7 +133,7 @@
                 <div class="blocReponse">
                     <input id="Q2A" type="radio" name="Q2" value="0">
                     <label for="Q2A">
-                        <img src="assets/images/cherry.png">
+                        <img src="assets/images/zangief400.png">
                         Zangief
                     </label>
 
@@ -142,7 +143,7 @@
                 <div class="blocReponse">
                     <input id="Q2B" type="radio" name="Q2" value="0">
                     <label for="Q2B">
-                        <img src="assets/images/cherry.png">
+                        <img src="assets/images/ehonda400.png">
                         E. Honda
                     </label>
 
@@ -152,7 +153,7 @@
                 <div class="blocReponse">
                     <input id="Q2C" type="radio" name="Q2" value="1">
                     <label for="Q2C">
-                        <img src="assets/images/cherry.png">
+                        <img src="assets/images/vega400.png">
                         Vega
                     </label>
 
@@ -183,7 +184,7 @@
             <p class="question__label">Question:</p>
             <div class="question__group">
                 <p class="question__question">Quel est le dernier niveau dans lequel Mario fait tomber Donkey Kong?</p>
-                <img class="imgQuestion" src="assets/images/cherry.png">
+                <img class="imgQuestion" src="assets/images/donkeykong400.png">
             </div>
         </div>
 
@@ -200,8 +201,8 @@
                 <div class="blocReponse">
                     <input id="Q3A" type="radio" name="Q3" value="0">
                     <label for="Q3A">
-                        <img src="assets/images/cherry.png">
-                        Le niveau avec des tapis roulants.
+                        <img src="assets/images/level1400.png">
+                        Le niveau brun.
                     </label>
 
                 </div>
@@ -210,8 +211,8 @@
                 <div class="blocReponse">
                     <input id="Q3B" type="radio" name="Q3" value="1">
                     <label for="Q3B">
-                        <img src="assets/images/cherry.png">
-                        Le niveau avec des rivets.
+                        <img src="assets/images/level3400.png">
+                        Le niveau bleu.
                     </label>
                 </div>
             </li>
@@ -219,8 +220,8 @@
                 <div class="blocReponse">
                     <input id="Q3C" type="radio" name="Q3" value="0">
                     <label for="Q3C">
-                        <img src="assets/images/cherry.png">
-                        Le niveau avec des ascenseurs et des ressorts.
+                        <img src="assets/images/level2400.png">
+                        Le niveau rouge.
                     </label>
                 </div>
             </li>
@@ -240,6 +241,15 @@
           <!--Ajouter ici avec JavaScript, la rétroaction, l'explication et la progression du quiz.-->
         </div>
     </section>
+<div class="resultat">
+      <section class="question">
+          <h2 class="resultat__titre reponses__label">Bravo,</h2>
+          <p class="resultat__info question__question">Vous avez eu <span id="questionBonne"></span> sur 3 questions (<span id="questionPourcent"></span>%) !</p>
+          <p><a href="index.html" class="btnProgression">Recommencer le quiz</a></p>
+      </section>
+
+
+</div>
 
 
 
@@ -260,8 +270,7 @@
 
 <script src="bower_components/picturefill/dist/picturefill.min.js" async></script>
 
-
-
+<script src="bower_components/picturefill/dist/picturefill.min.js" async></script>
 
 <script src="bower_components/requirejs/require.js" data-main="assets/js/main.js"></script>
 

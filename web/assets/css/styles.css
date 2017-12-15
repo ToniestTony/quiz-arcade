@@ -581,13 +581,19 @@ body {
       background-color: lightgreen; }
       .choixReponses .blocReponse .bonneValidation + label img {
         border: 5px solid lightgreen; }
+    .choixReponses .blocReponse .mauvaiseValidation + label {
+      color: lightcoral;
+      background-color: lightcoral; }
+      .choixReponses .blocReponse .mauvaiseValidation + label img {
+        border: 5px solid lightcoral; }
     .choixReponses .blocReponse label {
       display: block;
       padding: 20px; }
     .choixReponses .blocReponse label:hover {
       background-color: rgba(255, 130, 255, 0.4); }
     .choixReponses .blocReponse input {
-      display: none; }
+      display: none;
+      visibility: hidden; }
     .choixReponses .blocReponse input:checked + label {
       padding: 10px;
       border: 5px solid white;
@@ -599,6 +605,14 @@ body {
     .choixReponses .blocReponse .bonneValidation + label {
       padding: 10px;
       border: 5px solid lightgreen;
+      background-color: rgba(255, 130, 255, 0.4); }
+    .choixReponses .blocReponse input:checked.mauvaiseValidation + label {
+      padding: 10px;
+      border: 5px solid lightcoral;
+      background-color: rgba(255, 130, 255, 0.4); }
+    .choixReponses .blocReponse .mauvaiseValidation + label {
+      padding: 10px;
+      border: 5px solid lightcoral;
       background-color: rgba(255, 130, 255, 0.4); }
 
 div.retroaction {
@@ -650,6 +664,17 @@ div.retroaction {
   padding: 10px;
   font-family: VT323;
   font-size: 2em; }
+
+.resultat {
+  display: none; }
+  .resultat .resultat__info {
+    font-size: 1.5em; }
+  .resultat .btnProgression {
+    display: inline-block;
+    width: 100%;
+    text-align: center; }
+  .resultat .question {
+    padding-bottom: 20px; }
 
 footer {
   color: white; }
